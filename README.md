@@ -8,7 +8,7 @@ Clone the repository:
 git clone git@github.com:petema3/pusher-demo.git
 ```
 
-Install dependencies:
+Install PHP dependencies:
 
 ```
 composer install
