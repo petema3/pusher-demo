@@ -52,8 +52,3 @@ window.Echo = new Echo({
     key: window.Laravel.pusher.key,
     cluster: window.Laravel.pusher.cluster
 });
-
-window.Echo.channel('test')
-    .listen('TestBroadcast', (e) => {
-        $('#broadcasts').append(`<li>${e.message}</li>`);
-    });

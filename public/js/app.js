@@ -93,6 +93,10 @@ __webpack_require__(2);
 //     el: '#app'
 // });
 
+Echo.channel('test').listen('TestBroadcast', function (e) {
+  $('#broadcasts').append('<li>' + e.message + '</li>');
+});
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
@@ -160,10 +164,6 @@ window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
   broadcaster: 'pusher',
   key: window.Laravel.pusher.key,
   cluster: window.Laravel.pusher.cluster
-});
-
-window.Echo.channel('test').listen('TestBroadcast', function (e) {
-  $('#broadcasts').append('<li>' + e.message + '</li>');
 });
 
 /***/ }),

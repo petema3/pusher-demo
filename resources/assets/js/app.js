@@ -20,3 +20,8 @@ require('./bootstrap');
 // const app = new Vue({
 //     el: '#app'
 // });
+
+Echo.channel('test')
+    .listen('TestBroadcast', (e) => {
+        $('#broadcasts').append(`<li>${e.message}</li>`);
+    });
